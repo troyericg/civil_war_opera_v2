@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  codename: MyString
+  realname: MyString
+  gender: MyString
+  status: MyString
+  alignment: MyString
+  type: 
+  team: MyString
+  antiregistration: false
+  num_appearances: 1
+  haspicture: false
+
+two:
+  codename: MyString
+  realname: MyString
+  gender: MyString
+  status: MyString
+  alignment: MyString
+  type: 
+  team: MyString
+  antiregistration: false
+  num_appearances: 1
+  haspicture: false

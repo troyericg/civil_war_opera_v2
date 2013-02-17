@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Marvel's Civil War Opera V2</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="wrapper">
+	<div id="main" class="group">
+		<%= yield %>
+	</div>
+
+	<div id="footer" class="group">
+		<div id="footer-content">
+			<h4>made, with love, by <a href="http://troyericgriggs.com" target="_blank">troy eric griggs.</a></h4>
+			<div class="row firstchild">
+				<ul>
+					<li class="subhead"><h5>the personal</h5></li>
+					<li>bulleted point 1.</li>
+					<li>Bulleted point 2, <a href="#" target="_blank">with link.</a></li>
+				</ul>
+			</div>
+			<div class="row">
+				<ul>
+					<li class="subhead"><h5>the technological</h5></li>
+					<li>bulleted point 1.</li>
+					<li>Bulleted point 2, <a href="#" target="_blank">with link.</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

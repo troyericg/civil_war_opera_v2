@@ -1,0 +1,228 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	color:#3e3e3e;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+}
+
+
+a:link, a:visited {
+	color:#d8e6ff;
+	opacity:0.7;
+	outline:none;
+	text-decoration:none;
+}
+
+
+a:hover {
+	opacity:1;
+}
+
+#wrapper {
+	display: block;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+#main {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+#main #header {
+	position: relative;
+	background-color:#1e1e1e;
+	height:100px;
+	overflow: hidden;
+}
+
+#main #header h1 {
+	position: relative;
+	color:#fff;
+	font-family: trajan, palatino, georgia, serif;
+	font-size: 70px;
+	font-smoothing:antialiased;
+	-o-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	-webkit-font-smoothing:antialiased;
+	padding: 40px 0 0 16px;
+}
+
+#grid {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding:10px 20px;
+}
+
+#grid ul li {
+	display: inline;
+	float: left;
+/*	border-top: 1px solid #dedede;*/
+/*	margin-bottom: 8px;*/
+	margin-right: 5px;
+	padding-top: 5px;
+}
+
+#grid ul li img {
+	width:48px;
+}
+
+
+
+
+/*FOOTER------------------------------------------------------------*/
+
+#footer {
+	background-color:#3e3e3e;
+	border-top:4px solid #808080;
+	color:#999;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:0.813em; /*13px*/ 
+	line-height:16px;
+	margin-top:150px;
+	padding:50px 0;
+}
+
+
+#footer-content {
+	width:90%;
+	margin:0 auto;
+}
+
+
+#footer #footer-content h4 {
+	font-size:1.625em; /*26px*/
+	font-weight:900;
+	line-height:1.125em;
+	margin-bottom:100px;
+}
+
+
+#footer #footer-content ul li.subhead h5 {
+	color:#f4f4f4;
+	font-size:1.375em; /*22px*/
+	font-weight:900;
+	margin-top:-40px;
+	margin-bottom:20px;
+}
+
+
+#footer #footer-content .row {
+	border-left:1px solid #999;
+	display:inline;
+	float:left;
+	padding-left:40px;
+	padding-right:20px;
+	text-align:left;
+	width:250px;
+}
+
+
+#footer #footer-content .firstchild {
+	border-left:0px;
+	padding-left:0px;
+}
+
+
+#footer #footer-content ul li {
+	margin-bottom:10px;
+}
+
+
+#footer #footer-content ul li em {
+	font-style:italic;
+}
+
+
+#footer:hover {
+	color:#f4f4f4;
+}
+
+
+
+/*MISC------------------------------------------------------------*/
+
+.hide {
+	display:none;
+}
+
+a img {
+	border:none;
+}
+
+
+/*  Formerly known as "Clearfix"  */ 
+/*.group {display: inline-block;}*/
+.group:after {content: "."; clear: both;display: block;font-size: 0;height: 0;visibility: hidden;}
+
+
+/*Keeps certain strings from being selectable (highlight-able) on pages.*/
+.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+
+
+
+/* CSS3 VENDOR PREFIXES:
+-o-
+-moz-
+-webkit-
+*/
+
+
+
+/*For Responsive Design: 'target' divided by 'context' = 'result'   */
+
+@media only screen and (min-width:480px) and (max-width:768px) {
+	#footer #footer-content .row {
+		border-left:0px;
+		padding-left:0px;
+		margin-bottom:60px;
+	}
+}
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+	#main #header h1 {
+		font-size: 56px;
+		padding: 52px 0 0 16px;
+	}
+
+	#footer #footer-content .row {
+		border-left:0px;
+		padding-left:0px;
+		margin-bottom:60px;
+	}
+}
+
+
+/*LIST OF STARTER MEDIA QUERIES: 
+
+@media only screen and (max-width:320px) {}
+
+@media only screen and (min-width:320px) and (max-width:480px) {}
+
+@media only screen and (min-width:480px) and (max-width:768px) {}
+
+@media only screen and (min-width:768px) and (max-width:960px) {}
+
+@media only screen and (min-width:960px) and (max-width:1440px) {}
+
+@media only screen and (min-width:1440px) {}
+
+*/
