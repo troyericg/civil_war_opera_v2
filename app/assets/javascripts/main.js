@@ -125,7 +125,11 @@ function draw(data) {
 						// .attr('transform','none')
 						// .attr("transform", "translate(" + width / 4 + "," + height / 2 + ")")
 						.attr("r",function(d){
-							return d.num_appearances;
+							if (d.num_appearances != 0) {
+								return d.num_appearances + 5;
+							} else {
+								return d.num_appearances;
+							}
 						});
 						things.call(force);
 						
