@@ -3,4 +3,6 @@ class Character < ActiveRecord::Base
 
   # used scope to filter 
   scope :featured, {:conditions => [ "num_appearances > ?", 0]}
+  scope :pro_reg, {:conditions => [ "antiregistration == ?", false]}
+  scope :anti_reg, {:conditions => [ "antiregistration == ?", true]}
 end

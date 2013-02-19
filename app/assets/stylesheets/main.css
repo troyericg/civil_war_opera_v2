@@ -24,25 +24,29 @@ a:hover {
 #wrapper {
 	display: block;
 	position: relative;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1em;
 	width: 100%;
 	overflow: hidden;
 }
 
 #main {
+	position: relative;
 	display: block;
-	width: 100%;
+	width: 970px;
 	height: 100%;
 	margin: 0 auto;
 }
 
-#main #header {
+#wrapper #header {
 	position: relative;
 	background-color:#1e1e1e;
 	height:100px;
+	margin-bottom: 20px;
 	overflow: hidden;
 }
 
-#main #header h1 {
+#wrapper #header h1 {
 	position: relative;
 	color:#fff;
 	font-family: trajan, palatino, georgia, serif;
@@ -51,14 +55,29 @@ a:hover {
 	-o-font-smoothing:antialiased;
 	-moz-font-smoothing:antialiased;
 	-webkit-font-smoothing:antialiased;
+	width:990px;
+	margin: 0 auto;
 	padding: 40px 0 0 16px;
 }
 
 #grid {
 	display: block;
-	width: 100%;
-	height: 100%;
-	padding:10px 20px;
+	width: 556px;
+	margin: 0 auto;
+	padding:10px 0px;
+}
+
+#grid ul.anti {
+	display: inline;
+	float: left;
+	width:268px;
+	margin-right: 16px;
+}
+
+#grid ul.pro {
+	display: inline;
+	float: left;
+	width:268px;
 }
 
 #grid ul li {
@@ -198,7 +217,7 @@ a img {
 }
 
 @media only screen and (min-width:320px) and (max-width:480px) {
-	#main #header h1 {
+	#wrapper #header h1 {
 		font-size: 56px;
 		padding: 52px 0 0 16px;
 	}

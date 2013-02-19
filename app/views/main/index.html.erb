@@ -1,11 +1,40 @@
-<div id="header">
-	<h1>CIVIL WAR</h1>
+<div id="d3-space">
+	<div class="chart-left">
+		<h2>Anti-Registration</h2>
+		<p class="chart-num">#</p>
+		<p>Heroes : <span class="ah-add-info">#</span></p>
+		<p>Villains : <span class="av-add-info">#</span></p>
+	</div>
+	<div id="chart-main" class="group">
+		<ul>
+			<h4>View Options:</h4>
+			<li id="view-default">Default Mode</li>
+			<li id="view-scale">Scaled by Number of Appearances</li>
+		</ul>
+		<div id="palette"></div>
+	</div>
+	<div class="chart-right">
+		<h2>Pro-Registration</h2>
+		<p class="chart-num">#</p>
+		<p>Heroes : <span class="ph-add-info">#</span></p>
+		<p>Villains : <span class="pv-add-info">#</span></p>
+	</div>
 </div>
+
 <div id="grid" class="group">
-	<ul>
-		<% @characters.each do |character| %>
-			<li><%= image_tag(getImage(character)) %></li>
-<!-- 		<li><%= character.codename %>, Has Picture: <%= character.num_appearances %></li> -->
+	<ul class="anti">
+		<% @characters_anti.each do |character| %>
+		<li><%= image_tag(getImage(character)) %></li>
+		<% end %>
+	</ul>
+	<ul class="pro">
+		<% @characters_pro.each do |character| %>
+		<li><%= image_tag(getImage(character)) %></li>
 		<% end %>
 	</ul>
 </div>
+
+<%= javascript_tag do %>
+	var charData = <%= raw(@characters.to_json) %>;
+	draw(charData);
+<% end %>

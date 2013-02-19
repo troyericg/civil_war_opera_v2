@@ -1,0 +1,121 @@
+#d3-space {
+	position:relative;
+	display: block;
+	width: 970px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#d3-space #palette {
+	display:inline;
+	float:left;
+}
+
+#d3-space #chart-main {
+	position:relative;
+	display:inline;
+	float:left;
+	height:400px;
+	width:640px;
+	margin-left: 164px;
+	margin-right:15px;
+}
+
+#d3-space #chart-main ul {
+	display:inline;
+	float:left;
+	font-size:11px;
+	margin-bottom:10px;
+	margin-left:210px;
+}
+
+#d3-space #chart-main ul h4 {
+	display:inline;
+	float:left;
+	margin-top:6px;
+	margin-left:10px;
+	font-weight:900;
+	text-transform:uppercase;
+}
+
+#d3-space #chart-main ul li {
+	cursor:pointer;
+	display:inline;
+	float:left;
+	margin-left:10px;
+	background-color:whitesmoke;
+	border:1px solid #ccc;
+	border-radius:4px;
+	padding:6px;
+}
+
+#d3-space #chart-main ul li:hover {
+	background-color:#e2e2e2;
+}
+
+#d3-space .chart-left, #d3-space .chart-right {
+	display:inline;
+	float:left;
+	color:#666;
+	font-size:14px;
+	padding-top:10px;
+	text-align:center;
+	width:150px;
+}
+
+#d3-space .chart-left {
+	position: fixed;
+	margin-right: 14px;
+}
+
+#d3-space .chart-right {
+	position: fixed;
+}
+
+#d3-space .chart-left h2, #main .chart-right h2 {
+	color:#000;
+	font-size:20px;
+}
+
+#d3-space .chart-left p, #main .chart-right p {
+	font-size:12px;
+	font-weight:900;
+	margin-bottom:6px;
+	text-transform:uppercase;
+}
+
+#d3-space p.chart-num {
+	border-bottom:1px solid #e2e2e2;
+	font-size:90px;
+	font-weight:900;
+	margin-bottom:14px;
+	padding-bottom:4px;
+}
+
+/*Color: Anti-Reg*/
+#d3-space .chart-left p.chart-num {
+	color:#67C4E8;
+}
+
+/*Color: Pro-Reg*/
+#d3-space .chart-right p.chart-num {
+	color:#CC6666;
+}
+
+svg {
+/*	background-color:#f4f4f4;*/
+	display:block;
+	margin:0 auto;
+}
+
+
+.datacirc {
+	stroke:#f4f4f4;
+	stroke-width:1;
+}
+
+.datacirc:hover {
+	stroke:#666;
+	stroke-width:3;
+	cursor:pointer;
+}

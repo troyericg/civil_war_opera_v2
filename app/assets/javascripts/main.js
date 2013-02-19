@@ -1,6 +1,6 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+// # Place all the behaviors and hooks related to the matching controller here.
+// # All this logic will automatically be available in application.js.
+// # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 var margin = 20, width = 660 - margin, height = 400 - margin;
 var arr = [20, 54, 100, 8, 12, 37, 41];
@@ -9,8 +9,8 @@ function draw(data) {
 	"use strict";
 	
 	// Filters data based on stance
-	var antiReg = data.filter(function(d){ return d.anti_registration == true; });
-	var proReg = data.filter(function(d){ return d.anti_registration != true; });
+	var antiReg = data.filter(function(d){ return d.antiregistration == true; });
+	var proReg = data.filter(function(d){ return d.antiregistration != true; });
 	
 	
 	// Sub-Filters
@@ -59,7 +59,7 @@ function draw(data) {
 			.attr("transform", function(d,i) {
 				return "translate(" + ((r + 14)*(i%13) + 50) + "," + ((r + 14)*Math.floor(i/13) + margin) + ")"
 				})
-			.on('mouseover',function(d){ console.log(d.code_name) });
+			.on('mouseover',function(d){ console.log(d.codename + ": " + d.num_appearances) });
 
 		g2.selectAll("circle")
 			.data(proReg)
@@ -71,7 +71,7 @@ function draw(data) {
 			.attr("transform", function(d,i) {
 			      return "translate(" + ((r + 14)*(i%13) + margin - 8) + "," + ((r + 14)*Math.floor(i/13) + margin) + ")"
 			})
-			.on('mouseover',function(d){ console.log(d.code_name)});
+			.on('mouseover',function(d){ console.log(d.codename + ": " + d.num_appearances)});
 	}
 	
 		//NEED TO FIGURE OUT HOW TO TOGGLE BETWEEN LAYOUTS
@@ -125,7 +125,7 @@ function draw(data) {
 						// .attr('transform','none')
 						// .attr("transform", "translate(" + width / 4 + "," + height / 2 + ")")
 						.attr("r",function(d){
-							return arr[Math.floor(Math.random()*arr.length)] / 2;
+							return d.num_appearances;
 						});
 						things.call(force);
 						
@@ -153,7 +153,3 @@ function draw(data) {
 		
 		
 };
-
-d3.json('_files/data/_ready/cwo_characters.json', function(data){
-	draw(data);
-});
