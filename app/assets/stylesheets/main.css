@@ -41,7 +41,7 @@ a:hover {
 #wrapper #header {
 	position: relative;
 	background-color:#1e1e1e;
-	height:100px;
+	height:70px;
 	margin-bottom: 20px;
 	overflow: hidden;
 }
@@ -57,7 +57,7 @@ a:hover {
 	-webkit-font-smoothing:antialiased;
 	width:990px;
 	margin: 0 auto;
-	padding: 40px 0 0 16px;
+	padding: 10px 0 0 16px;
 }
 
 #grid {
@@ -92,6 +92,26 @@ a:hover {
 #grid ul li img {
 	width:48px;
 }
+
+#grid ul:hover li img {
+	opacity: 0.3;
+	-o-opacity: 0.3;
+	-moz-opacity: 0.3;
+	-webkit-opacity: 0.3;
+
+	transition-duration: 0.3s;
+	-o-transition-duration: 0.3s; /* Opera */
+	-moz-transition-duration: 0.3s; /* Firefox 4 */
+	-webkit-transition-duration: 0.3s; /* Safari and Chrome */
+}
+
+#grid ul li img:hover {
+	opacity: 1;
+	-o-opacity: 1;
+	-moz-opacity: 1;
+	-webkit-opacity: 1;
+}
+
 
 
 
@@ -219,7 +239,7 @@ a img {
 @media only screen and (min-width:320px) and (max-width:480px) {
 	#wrapper #header h1 {
 		font-size: 56px;
-		padding: 52px 0 0 16px;
+		padding: 22px 0 0 16px;
 	}
 
 	#footer #footer-content .row {
